@@ -1,0 +1,7 @@
+{
+  "extends": "@avalanche/stylelint-config",
+  "rules": {
+    "max-nesting-depth": 4,
+    "no-empty-source": null
+  }
+}
