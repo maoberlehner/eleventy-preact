@@ -39,10 +39,10 @@
     "node-sass": "^4.13.1",
     "node-sass-glob-importer": "^5.3.2",
     "preact-render-to-string": "^5.1.4",
-    "rollup": "^2.0.0",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup": "^2.0.3",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-filesize": "^6.2.1",
     "rollup-plugin-uglify": "^6.0.4",
-    "stylelint": "^13.2.0"
+    "stylelint": "^13.2.1"
   }
 }
