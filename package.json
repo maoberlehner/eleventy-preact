@@ -10,7 +10,7 @@
     "dev": "NODE_ENV=dev concurrently 'eleventy --serve' 'npm run watch'",
     "scripts:app": "rollup --config --file dist/app.js --format iife --name App src/app.js",
     "scripts:app:watch": "npm run scripts:app -- --watch",
-    "styles": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js -o dist src/styles/index.scss",
+    "styles": "node-sass --importer node_modules/node-sass-magic-importer/dist/cli.js -o dist src/styles/index.scss",
     "styles:watch": "chokidar 'src/**/*.scss' -c 'npm run styles'",
     "watch": "concurrently 'npm run scripts:app:watch' 'npm run styles:watch'",
     "lint:scripts": "eslint --ext .js .",
@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "htm": "^3.0.3",
-    "preact": "^10.3.3"
+    "preact": "^10.3.3",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
@@ -37,7 +38,7 @@
     "eslint-config-preact": "^1.1.0",
     "eslint-plugin-import": "^2.20.1",
     "node-sass": "^4.13.1",
-    "node-sass-glob-importer": "^5.3.2",
+    "node-sass-magic-importer": "^5.3.2",
     "preact-render-to-string": "^5.1.4",
     "rollup": "^2.0.3",
     "rollup-plugin-babel": "^4.4.0",

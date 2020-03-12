@@ -1,3 +1,7 @@
+// Generic
+@import '~reset-css/sass/reset';
+@import './generic/**/*.scss';
+
 // Components
 @import '../components/**/*.scss';
 
