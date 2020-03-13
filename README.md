@@ -11,6 +11,9 @@ npm run dev
 
 # Build for production with minification.
 npm run build
+
+# Lint all files.
+npm run lint
 ```
 
 ## About
