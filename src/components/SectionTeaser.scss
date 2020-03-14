@@ -1,0 +1,19 @@
+.SectionTeaser {
+  display: flex;
+  margin-top: -1em;
+  margin-left: -1em;
+  flex-wrap: wrap;
+}
+
+.SectionTeaser__item {
+  padding-top: 1em;
+  padding-left: 1em;
+  min-width: 14em;
+  flex-basis: 0%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.SectionTeaser__image {
+  max-width: 100%;
+}

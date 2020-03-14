@@ -1,0 +1,28 @@
+.SectionHero {
+  position: relative;
+}
+
+.SectionHero__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.SectionHero__info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 0.75em rgba(0, 0, 0, 0.4);
+  font-size: 2em;
+}
+
+.SectionHero__title {
+  margin-bottom: 0.25em;
+  font-size: 2em;
+}

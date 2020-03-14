@@ -1,26 +1,16 @@
 const { html } = require(`htm/preact`);
 
-const OnlyClient = require(`./OnlyClient`);
+const BaseWrapper = require(`./BaseWrapper`);
 
 module.exports = ({ children }) => html`
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    ${children}
-    <${OnlyClient}>
-      <button onClick=${() => console.log(`log`)}>
-        Log to console
-      </button>
-    <//>
-  </main>
-  <footer>
-    © Markus Oberlehner
-  </footer>
+  <div class="LayoutDefault">
+    <main>
+      ${children}
+    </main>
+    <footer class="LayoutDefault__footer">
+      <${BaseWrapper}>
+        © Markus Oberlehner
+      <//>
+    </footer>
+  </div>
 `;
