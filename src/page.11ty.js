@@ -7,7 +7,7 @@ const App = require(`./components/App`);
 module.exports = class Page {
   data() {
     return {
-      title: `Page`,
+      title: `Setting up Eleventy with Preact and htm`,
       layout: `layout.njk`,
       pagination: {
         data: `pages`,
