@@ -1,7 +1,7 @@
 const { html } = require(`htm/preact`);
 const { useState } = require(`preact/hooks`);
 
-const ClientHydration = require(`./ClientHydration`);
+const withHydration = require(`./with-hydration`);
 
 function LikeForm({ id }) {
   const [likes, setLikes] = useState(0);
@@ -11,23 +11,21 @@ function LikeForm({ id }) {
   };
 
   return html`
-    <${ClientHydration} component="LikeForm" childProps=${{ id }}>
-      <form
-        action=${`/like/${id}`}
-        method="post"
-        class="LikeForm"
+    <form
+      action=${`/like/${id}`}
+      method="post"
+      class="LikeForm"
+    >
+      <button
+        aria-label="Like this image"
+        class="LikeForm__button"
+        onClick=${handleClick}
       >
-        <button
-          aria-label="Like this image"
-          class="LikeForm__button"
-          onClick=${handleClick}
-        >
-          ❤️
-        </button>
-        ${likes}
-      </form>
-    <//>
+        ❤️
+      </button>
+      ${likes}
+    </form>
   `;
 }
 
-module.exports = LikeForm;
+module.exports = withHydration(LikeForm);

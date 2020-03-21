@@ -8,13 +8,16 @@ const componentMap = {
   LikeForm,
 };
 
-const $components = document.querySelectorAll(`[data-component]`);
+const componentData = window.__STATE__.components;
+const $componentMarkers = document.querySelectorAll(`[data-cmp-id]`);
 
-Array.from($components).forEach(($component) => {
+Array.from($componentMarkers).forEach(($marker) => {
+  const $component = $marker.nextElementSibling;
+
   whenVisible($component, () => {
-    const childProps = JSON.parse($component.dataset.childProps);
-    const Component = componentMap[$component.dataset.component];
+    const { name, props } = componentData.find(c => c.id === $marker.dataset.cmpId);
+    const Component = componentMap[name];
 
-    render(html`<${Component} ...${childProps}/>`, $component.parentNode, $component);
+    render(html`<${Component} ...${props}/>`, $component.parentNode, $component);
   });
 });
