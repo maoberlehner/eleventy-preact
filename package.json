@@ -6,11 +6,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "NODE_ENV=production concurrently 'eleventy' 'npm run styles'",
+    "build": "NODE_ENV=production concurrently 'eleventy' 'npm run scripts:app' 'npm run styles'",
     "dev": "NODE_ENV=dev concurrently 'eleventy --serve' 'npm run watch'",
+    "scripts:app": "rollup --config --file dist/app.js --format iife --name App src/app.js",
+    "scripts:app:watch": "npm run scripts:app -- --watch",
     "styles": "node-sass --importer node_modules/node-sass-magic-importer/dist/cli.js -o dist src/styles/index.scss",
     "styles:watch": "chokidar 'src/**/*.scss' -c 'npm run styles'",
-    "watch": "concurrently 'npm run styles:watch'",
+    "watch": "concurrently 'npm run scripts:app:watch' 'npm run styles:watch'",
     "lint:scripts": "eslint --ext .js .",
     "lint:styles": "stylelint 'src/**/*.scss'",
     "lint": "concurrently 'npm run lint:scripts' 'npm run lint:styles'"
@@ -24,7 +26,11 @@
     "@11ty/eleventy": "^0.10.0",
     "@avalanche/eslint-config": "^4.0.0",
     "@avalanche/stylelint-config": "^1.0.1",
+    "@babel/preset-env": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-htm": "^3.0.0",
     "chokidar-cli": "^2.1.0",
     "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
@@ -33,6 +39,9 @@
     "node-sass": "^4.13.1",
     "node-sass-magic-importer": "^5.3.2",
     "preact-render-to-string": "^5.1.4",
+    "rollup": "^2.1.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^5.3.0",
     "stylelint": "^13.2.1"
   }
 }

@@ -1,0 +1,16 @@
+.SectionMasonry {
+  margin-top: -1em;
+  columns: 3 242px;
+  column-gap: 1em;
+  text-align: right;
+}
+
+.SectionMasonry__item {
+  padding-top: 1em;
+  page-break-inside: avoid;
+}
+
+.SectionMasonry__image {
+  max-width: 100%;
+  height: auto;
+}

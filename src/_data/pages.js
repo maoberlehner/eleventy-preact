@@ -16,6 +16,43 @@ module.exports = [{
       },
     },
     {
+      name: `masonry`,
+      data: {
+        images: [
+          {
+            alt: `Snowy mountains.`,
+            id: 1,
+            src: `https://images.unsplash.com/reserve/4JUAYmLTuS1mBvBBwe3D_St_Anton.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80`,
+          },
+          {
+            alt: `Snowy mountains.`,
+            id: 2,
+            src: `https://images.unsplash.com/photo-1464277621354-a197b03f19cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80`,
+          },
+          {
+            alt: `Snowy mountains.`,
+            id: 3,
+            src: `https://images.unsplash.com/photo-1467049878711-ebcf8c4b23da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80`,
+          },
+          {
+            alt: `Snowy mountains.`,
+            id: 4,
+            src: `https://images.unsplash.com/photo-1464852045489-bccb7d17fe39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80`,
+          },
+          {
+            alt: `Snowy mountains.`,
+            id: 5,
+            src: `https://images.unsplash.com/photo-1462351850891-7aedcb9e2450?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80`,
+          },
+          {
+            alt: `Snowy mountains.`,
+            id: 6,
+            src: `https://images.unsplash.com/photo-1465726208258-198e6f4402ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80`,
+          },
+        ],
+      },
+    },
+    {
       name: `teaser`,
       data: [
         {

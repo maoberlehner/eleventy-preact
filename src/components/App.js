@@ -3,11 +3,13 @@ const { html } = require(`htm/preact`);
 const LayoutDefault = require(`./LayoutDefault`);
 const SectionContent = require(`./SectionContent`);
 const SectionHero = require(`./SectionHero`);
+const SectionMasonry = require(`./SectionMasonry`);
 const SectionTeaser = require(`./SectionTeaser`);
 
 const sections = {
   content: SectionContent,
   hero: SectionHero,
+  masonry: SectionMasonry,
   teaser: SectionTeaser,
 };
 
