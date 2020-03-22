@@ -8,8 +8,7 @@ module.exports = Component => (props) => {
   id += 1;
 
   const scriptSrc = `
-    window.__STATE__=window.__STATE__ || {components:[]};
-    window.__STATE__.components.push({name:${JSON.stringify(Component.name)},id:'${id}',props:${JSON.stringify(props)}});
+    window.__STATE__.components[${id}]={name:${JSON.stringify(Component.name)},props:${JSON.stringify(props)}}
   `;
 
   return html`
