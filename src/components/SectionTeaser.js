@@ -10,7 +10,7 @@ module.exports = ({ data }) => html`
           <img
             class="SectionTeaser__image"
             src=${teaser.image}
-            alrt=${teaser.title}
+            alt=${teaser.title}
           />
           <div class="s-content">
             <h2>
