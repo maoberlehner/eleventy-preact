@@ -6,7 +6,7 @@ module.exports = [
       {
         name: `hero`,
         data: {
-          image: `https://images.unsplash.com/photo-1518699705938-d9be21ec6ff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3840&h=900&q=40`,
+          image: `https://images.unsplash.com/photo-1518699705938-d9be21ec6ff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&h=450&q=50`,
           title: `Welcome!`,
           text: `This is a site built with Eleventy + Preact.`,
         },
@@ -87,7 +87,7 @@ module.exports = [
       {
         name: `hero`,
         data: {
-          image: `https://images.unsplash.com/photo-1517690623533-ca77a9a4b402?ixlib=rb-1.2.1&auto=format&fit=crop&w=3840&h=900&q=40`,
+          image: `https://images.unsplash.com/photo-1517690623533-ca77a9a4b402?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=450&q=50`,
           title: `Welcome to page 2!`,
           text: `This is a site built with Eleventy + Preact.`,
         },
