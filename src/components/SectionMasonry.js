@@ -8,7 +8,12 @@ module.exports = ({ data }) => html`
     <div class="SectionMasonry">
       ${data.images.map(({ alt, id, src }) => html`
         <div class="SectionMasonry__item">
-          <img src=${src} alt=${alt} class="SectionMasonry__image"/>
+          <img
+            src=${src}
+            alt=${alt}
+            class="SectionMasonry__image"
+            loading="lazy"
+          />
           <${LikeForm} id=${id}/>
         </div>
       `)}

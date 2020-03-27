@@ -11,6 +11,7 @@ module.exports = ({ data }) => html`
             class="SectionTeaser__image"
             src=${teaser.image}
             alt=${teaser.title}
+            loading="lazy"
           />
           <div class="s-content">
             <h2>
